@@ -1,0 +1,26 @@
+{
+  "name": "email_service",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/nodemailer": "^6.4.17"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "email_service": "file:",
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.0"
+  },
+  "scripts": {
+    "dev": "bun --hot --env-file=.env run ./src/index.ts",
+    "build": "tsc --project tsconfig.json",
+    "start": "bun --env-file=.env dist/index.js"
+  }
+}
